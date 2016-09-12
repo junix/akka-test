@@ -2,7 +2,7 @@ name := "akka-test"
 
 version := "1.0"
 
-scalaVersion := "2.11.8"
+scalaVersion := "2.11.7"
 
 scalacOptions := Seq("-unchecked", "-deprecation", "-encoding", "utf8")
 
@@ -11,10 +11,7 @@ resolvers += Resolver.url("Typesafe Ivy Snapshots Repository",
 
 // "org.mybatis.scala"   % "mybatis-scala-core_2.11" % "1.0.3",
 
-libraryDependencies ++= {
-  val akkaV  = "2.3.9"
-  val sprayV = "1.3.3"
-  Seq(
+libraryDependencies ++= Seq(
     "com.lihaoyi"       % "ammonite_2.11.7"                      % "0.7.4"     % "test" ,
     "com.typesafe"      % "config"                               % "1.3.0"              ,
     "org.scalaz"        %% "scalaz-core"                         % "7.2.5"              ,
@@ -45,6 +42,5 @@ libraryDependencies ++= {
     "com.typesafe.akka" %% "akka-http-xml-experimental"          % "2.4.10"             ,
     "com.typesafe.akka" %% "akka-persistence-query-experimental" % "2.4.10"
   )
-}
 
 initialCommands in (Test, console) := """ammonite.Main().run()"""
