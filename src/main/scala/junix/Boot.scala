@@ -6,7 +6,7 @@ object Boot extends App {
   val r = system.actorOf(Props[T],"wanglijun")
 //  r ! "c"
 //  r ! "toc"
-  system.actorSelection("akka://junix/user/wanglijun/ccc") ! "hello"
+  system.actorSelection("/user/*/*") ! "hello"
   println(system.terminate().value)
 
 
